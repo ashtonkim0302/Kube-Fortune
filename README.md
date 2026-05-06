@@ -166,37 +166,37 @@ docker compose -f docker-compose.local.yml down -v
 
 아키텍처 도면부터 부하 테스트 리포트까지, 프로젝트의 모든 의사결정과 엔지니어링 기록은 아래 Wiki에 상세히 문서화되어 있습니다. 관심 있는 주제의 링크를 클릭하여 상세한 내용을 확인해 보세요.
 
-* **[🏠 Home (프로젝트 위키 홈)](https://github.com/msp-architect-2026/kim-taeseung/wiki)**
+* **[🏠 Home (프로젝트 위키 홈)](https://github.com/ashtonkim0302/Kube-Fortune/wiki)**
   * 전체 위키 문서의 네비게이션 허브 역할을 하며, 각 엔지니어링 단계별 상세 문서로 바로 이동할 수 있는 인덱스를 제공합니다.
 
-* **[🎯 Project Story & Features (기획 의도 및 서비스 소개)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Project-Story-and-Features)**
+* **[🎯 Project Story & Features (기획 의도 및 서비스 소개)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Project-Story-and-Features)**
   * 단순한 새로고침(F5)을 막기 위한 인프라 무드등부터, 트래픽 라우팅을 증명하는 LB 배지까지 Kube-Fortune이 탄생하게 된 기획 의도와 6대 핵심 기술 목표를 소개합니다.
 
-* **[🛠️ Tech Stack & Decisions (기술 선정 배경)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Tech-Stack-and-Decisions)**
+* **[🛠️ Tech Stack & Decisions (기술 선정 배경)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Tech-Stack-and-Decisions)**
   * 왜 클릭 몇 번으로 가능한 관리형 클라우드를 두고 온프레미스 `kubeadm`을 선택했는지, 무거운 Docker Engine 대신 `containerd`를 도입한 이유가 무엇인지 등 각 기술 스택의 트레이드오프(Trade-offs)와 엄밀한 선정 배경을 다룹니다.
 
-* **[🏛️ Architecture (아키텍처 설계 및 트래픽 흐름)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Architecture)**
+* **[🏛️ Architecture (아키텍처 설계 및 트래픽 흐름)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Architecture)**
   * 시스템 토폴로지 도면을 바탕으로 Inbound/Outbound 네트워크 트래픽 흐름, RESTful API 명세, 동적으로 초기화되는 DB 스키마, 그리고 상태(Stateful) 관리 전략의 진화 과정을 설명합니다.
 
-* **[🖥️ Infrastructure Setup (클러스터 구성 및 환경 명세)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Infrastructure-Setup)**
+* **[🖥️ Infrastructure Setup (클러스터 구성 및 환경 명세)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Infrastructure-Setup)**
   * 클라우드 의존 없이 UTM 가상화(ARM64) 환경에서 마스터/워커 노드를 직접 분리 구축한 과정과 containerd 런타임, Flannel CNI 등 온프레미스 K8s 클러스터를 바닥부터 프로비저닝한 상세 명세가 담겨 있습니다.
 
-* **[🚀 CI/CD Pipeline (GitLab & ArgoCD 파이프라인)](https://github.com/msp-architect-2026/kim-taeseung/wiki/CI-CD-Pipeline)**
+* **[🚀 CI/CD Pipeline (GitLab & ArgoCD 파이프라인)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/CI-CD-Pipeline)**
   * ARM64 호환 이미지를 구워내는 GitLab Runner(DinD) 기반의 CI 자동화와, Kubeconfig 노출 위험을 원천 차단한 ArgoCD의 Pull 방식 GitOps 무중단 배포(CD) 파이프라인 구조를 설명합니다.
   
-* **[📈 Scenario & Testing (HA 시나리오 검증 및 k6 부하 테스트)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Scenario-and-Testing)**
+* **[📈 Scenario & Testing (HA 시나리오 검증 및 k6 부하 테스트)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Scenario-and-Testing)**
   * 동시 접속자 500명을 가정한 k6 부하 테스트(HPA 자동 스케일 아웃 검증) 결과와, 파드 삭제부터 워커 노드 셧다운에 이르는 4단계의 K8s 고가용성(HA) 장애 복구 시나리오를 정량적으로 검증한 리포트입니다.
   
-* **[⚡ Performance Improvement (DB 커넥션 풀 등 성능 개선 기록)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Performance-Improvement)**
+* **[⚡ Performance Improvement (DB 커넥션 풀 등 성능 개선 기록)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Performance-Improvement)**
   * 부하 테스트 중 발견된 애플리케이션 병목을 DB 커넥션 풀 도입으로 해결하여 TPS를 95% 향상시킨 사례, 그리고 StatefulSet의 재배치 지연 현상을 자동화하여 복구 시간을 단축한 성능 최적화 과정을 기록하고, AI 프롬프트 고도화 및 UI/UX 개편을 통해 서비스의 완성도를 높였습니다.
   
-* **[🔥 Troubleshooting (문제 해결 및 회고)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Troubleshooting)**
+* **[🔥 Troubleshooting (문제 해결 및 회고)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Troubleshooting)**
   * AI 프롬프트 누수로 인한 UI 렌더링 실패, 온프레미스 DinD 환경의 BuildKit 인증 장애, 노드 재부팅 시 발생한 CNI(Flannel) 데드락 및 연쇄 통신 장애 등 인프라 구축 과정에서 겪은 치열한 문제 해결(Troubleshooting) 과정을 아키텍트의 시선으로 풀어냈습니다.
   
-* **[📝 Meetings & Feedback (멘토링 회의록)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Meetings-and-Feedback)**
+* **[📝 Meetings & Feedback (멘토링 회의록)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Meetings-and-Feedback)**
   * 주간 회의 및 멘토링을 통해 도출된 K8s 재해 복구(DR) 대비책, 부하 테스트 타겟 재조정 등 날카로운 피드백과 이를 실제 아키텍처에 반영하며 프로젝트를 고도화해 나간 성장 기록입니다.
 
-* **[🌟 Retrospective & Vision (최종 프로젝트 회고 및 향후 비전)](https://github.com/msp-architect-2026/kim-taeseung/wiki/Retrospective-and-Vision)**
+* **[🌟 Retrospective & Vision (최종 프로젝트 회고 및 향후 비전)](https://github.com/ashtonkim0302/Kube-Fortune/wiki/Retrospective-and-Vision)**
   * 온프레미스 인프라 환경에서 부하 테스트와 K8s 장애 복구를 직접 부딪히며 겪었던 치열한 엔지니어링 회고가 담겨 있습니다.
   * **향후 비전:** 기술적인 완성을 넘어, 이 서비스가 실제로 어떻게 쓰일 수 있을지 방향성을 고민했습니다.
 
